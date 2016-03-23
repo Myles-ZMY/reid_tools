@@ -8,7 +8,7 @@ function out_img = ssseg(img)
 i = imread(img);
 % Split image in six stripes
 q = mod(size(i, 1), 6);
-n = size(img, 1) - q;
-out_img = mat2cell(i, [repmat(n/6, [1, 5]) (n/6 + 2)]);
+n = size(i, 1) - q;
+out_img = mat2cell(i, [repmat(n/6, [1, 5]) (n/6 + q)]);
 
 end
