@@ -4,7 +4,7 @@ function [ hhn, shn ] = rgb2hsnorm( I )
 %   normalized hue and saturation histograms.
 
 I_HS = rgb2hsv(I);
-hhn = imhist(I_HS(:,:,1)/trapz(I_HS(:,:,1)));
-shn = imhist(I_HS(:,:,2)/trapz(I_HS(:,:,2)));
+hhn = imhist(I_HS(:,:,1))/trapz(imhist(I_HS(:,:,1)));
+shn = imhist(I_HS(:,:,2))/trapz(imhist(I_HS(:,:,2)));
 
 end
